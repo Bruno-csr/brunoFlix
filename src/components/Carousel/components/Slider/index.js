@@ -28,7 +28,6 @@ const Container = styled.ul`
   }
 `;
 
-
 export const SliderItem = styled.li`
   margin-right: 16px;
   img {
