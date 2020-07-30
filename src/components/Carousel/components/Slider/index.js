@@ -8,7 +8,7 @@ const Container = styled.ul`
   margin: 0;
   .slick-prev,
   .slick-next {
-    z-index: 50;
+    z-index: 1;
     top: 0;
     bottom: 0;
     margin: auto;
