@@ -14,7 +14,7 @@ const HomeWrapper = styled.div `
   @media (max-width: 800px) {
         padding-top: 40px
   }
-`
+`;
 
 function Home() {
   return (

@@ -37,7 +37,6 @@
         right: 0;
         text-align: center;
     }
-
  `;
 
  export default Button

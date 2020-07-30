@@ -9,8 +9,9 @@ export const VideoCardGroupContainer = styled.section`
 
 export const Title = styled.h3`
   font-size: 35px;
-  line-height: 1;
   font-weight: normal;
+  line-height: 1;
+  
   padding: 5px;
   display: inline-block;
   border-radius: 4px;
@@ -57,7 +58,6 @@ export const VideoCardList = styled.ul`
   /* 
   padding-bottom: 32px;
   flex-direction: row;
-  
   */
 `;
 

@@ -18,7 +18,7 @@ export const VideoCardContainer = styled.a`
   &:focus {
     opacity: .5;
   }
-  
+
   /* 
   text-decoration: none;
   overflow: hidden;

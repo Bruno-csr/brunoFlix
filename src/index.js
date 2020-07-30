@@ -11,7 +11,6 @@ import {
 import CadastroVideo from './pages/cadastro/Video'
 import CadastroCategoria from './pages/cadastro/Categoria'
 
-
 //const de erro - desafio de colocar um jogo na página de erro
 const paginaErro = () => <div>Página 404</div>
 

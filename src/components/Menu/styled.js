@@ -6,7 +6,7 @@ export const LogoImage = styled.img`
     @media (max-width: 800px) {
         max-width: 105px;
     }
-`
+`;
 
 export const MenuWrapper = styled.nav`
     width: 100%;
