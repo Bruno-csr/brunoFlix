@@ -38,6 +38,6 @@
         text-align: center;
     }
 
- `
+ `;
 
  export default Button

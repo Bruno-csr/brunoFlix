@@ -31,4 +31,4 @@ export const MenuWrapper = styled.nav`
         height: 40px;
         justify-content: center;
     }
-`
+`;

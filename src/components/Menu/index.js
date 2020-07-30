@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../../assets/images/brunoflix.png'
-import { LogoImage, MenuWrapper} from './styled.js'
+import { LogoImage, MenuWrapper } from './styled.js'
 import { Link } from 'react-router-dom'
 import Button from '../Button'
 

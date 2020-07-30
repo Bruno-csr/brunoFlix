@@ -59,6 +59,5 @@ export const VideoCardList = styled.ul`
   flex-direction: row;
   
   */
-  
 `;
 

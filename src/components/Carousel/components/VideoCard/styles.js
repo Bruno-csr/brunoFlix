@@ -30,7 +30,6 @@ export const VideoCardContainer = styled.a`
   align-items: flex-end;
   padding: 16px;
 
-  
   &:not(:first-child) {
     margin-left: 20px;
   } 

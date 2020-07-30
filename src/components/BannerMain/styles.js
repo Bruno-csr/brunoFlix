@@ -62,7 +62,7 @@ ContentAreaContainer.Item = styled.div`
   @media (max-width: 800px) {
     width: 100%;
   }
-  `;
+`;
 
 ContentAreaContainer.Title = styled.h2`
   font-weight: 300;
