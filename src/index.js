@@ -8,6 +8,7 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
+
 import CadastroVideo from './pages/cadastro/Video'
 import CadastroCategoria from './pages/cadastro/Categoria'
 

@@ -18,7 +18,6 @@ export const MenuWrapper = styled.nav`
     left: 0;
     padding-left: 5%;
     padding-right: 5%;
-    /* hight: 0; */
 
     display: flex;
     justify-content: space-between;
@@ -26,6 +25,7 @@ export const MenuWrapper = styled.nav`
 
     background-color: var(--black);
     border-bottom: 2px solid var(--primary);
+
 
     @media (max-width: 800px) {
         height: 40px;
