@@ -31,9 +31,12 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    console.log('puts');
+    // ('puts');
 
-    const URL_TOP = 'http://localhost:8080/categorias';
+    const URL_TOP = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categorias'
+      : 'https://bruno-flix.herokuapp.com/categorias';
+
     fetch(URL_TOP)
       .then(async (result) => {
         const resposta = await result.json();

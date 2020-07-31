@@ -1,23 +1,25 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
-import Logo from '../../assets/images/brunoflix.png'
-import { LogoImage, MenuWrapper } from './styled.js'
+import { Link } from 'react-router-dom';
+import Logo from '../../assets/images/brunoflix.png';
+// eslint-disable-next-line import/extensions
+import { LogoImage, MenuWrapper } from './styled.js';
 import './Menu.css';
-import { Link } from 'react-router-dom'
-import Button from '../Button'
+import Button from '../Button';
 // import ButtonLink from './components/ButtonLink';
 
 function Menu() {
-    return (
-        <MenuWrapper >
-            <Link to = '/'>
-                <LogoImage  className = "Logo" src = {Logo} alt='BrunoFlix logo'/>
-            </Link>
+  return (
+    <MenuWrapper>
+      <Link to="/">
+        <LogoImage className="Logo" src={Logo} alt="BrunoFlix logo" />
+      </Link>
 
-            <Button as={Link} className='ButtonLink' to = '/cadastro/video'>
-                Novo Vídeo
-            </Button>
-        </MenuWrapper>
-    )
+      <Button as={Link} className="ButtonLink" to="/cadastro/video">
+        Novo Vídeo
+      </Button>
+    </MenuWrapper>
+  );
 }
 
 export default Menu;
