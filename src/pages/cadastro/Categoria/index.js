@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useFrom';
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -11,28 +12,12 @@ function CadastroCategoria() {
     descricao: '',
     cor: '',
   };
+
   const [categorias, setCategorias] = useState([]);
-  const [values, setValues] = useState(valoresIniciais);
 
-  function setValue(chave, valor) {
-    // chave: nome
-    setValues({
-      ...values,
-      [chave]: valor, // nome: 'valor'
-    });
-  }
-
-  function handleChange(event) {
-    // const { getAttribute, value } = event.target;
-    setValue(
-      event.target.getAttribute('name'),
-      event.target.value,
-    );
-  }
+  const { handleChange, values, clearForm } = useForm(valoresIniciais);
 
   useEffect(() => {
-    // ('puts');
-
     const URL_TOP = window.location.hostname.includes('localhost')
       ? 'http://localhost:8080/categorias'
       : 'https://bruno-flix.herokuapp.com/categorias';
@@ -59,8 +44,7 @@ function CadastroCategoria() {
           ...categorias,
           values,
         ]);
-
-        setValues(valoresIniciais);
+        clearForm();
       }}
       >
 
@@ -87,7 +71,7 @@ function CadastroCategoria() {
           onChange={handleChange}
         />
 
-        <Button to=''>
+        <Button>
           Cadastrar
         </Button>
       </form>
@@ -100,8 +84,8 @@ function CadastroCategoria() {
 
       <ul>
         {categorias.map((categoria) => (
-          <li key={`${categoria.nome}`}>
-            {categoria.nome}
+          <li key={`${categoria.titulo}`}>
+            {categoria.titulo}
           </li>
         ))}
       </ul>

@@ -1,8 +1,7 @@
 /* eslint-disable linebreak-style */
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
-const Button = styled(Link)`
+const Button = styled.button`
     cursor: pointer;
 
     border: 1px solid var(--white);
