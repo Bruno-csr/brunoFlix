@@ -56,7 +56,6 @@ function CadastroCategoria() {
           });
       }}
       >
-
         <FormField
           label="Nome da categoria"
           name="nome"

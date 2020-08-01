@@ -38,6 +38,6 @@ const Button = styled.button`
         right: 0;
         text-align: center;
     }
- `;
+`;
 
 export default Button;

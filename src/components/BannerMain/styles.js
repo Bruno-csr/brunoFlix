@@ -99,7 +99,6 @@ export const WatchButton = styled.button`
   margin-left: auto;
   margin-right: auto;
   display: none;
-
   /* 
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;

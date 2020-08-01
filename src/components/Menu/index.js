@@ -6,7 +6,6 @@ import Logo from '../../assets/images/brunoflix.png';
 import { LogoImage, MenuWrapper } from './styled.js';
 import './Menu.css';
 import Button from '../Button';
-// import ButtonLink from './components/ButtonLink';
 
 function Menu() {
   return (

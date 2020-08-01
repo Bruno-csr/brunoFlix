@@ -34,7 +34,6 @@ function Carousel({
           if (ignoreFirstVideo && index === 0) {
             return null;
           }
-
           return (
             <SliderItem key={video.titulo}>
               <VideoCard

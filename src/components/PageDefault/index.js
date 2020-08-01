@@ -1,4 +1,5 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable react/prop-types */
 import React from 'react';
 import styled, { css } from 'styled-components';
 
@@ -18,7 +19,6 @@ const Main = styled.main`
     `}
 `;
 
-// destructor
 function PageDefault({ children, paddingAll }) {
   return (
     <>

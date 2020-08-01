@@ -11,11 +11,10 @@ function Home() {
   useEffect(() => {
     categoriasRepository.getAllWithVideos()
       .then((categoriasComVideos) => {
-        console.log(categoriasComVideos);
         setDadosiniciais(categoriasComVideos);
       })
       .catch((err) => {
-        console.log(err.message);
+        alert(err.message);
       });
   }, []);
 

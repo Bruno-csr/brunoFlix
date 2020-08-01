@@ -16,7 +16,6 @@ export const Title = styled.h3`
   display: inline-block;
   border-radius: 4px;
   margin-bottom: 16px;
-
   /* 
   font-style: normal;
   background: red;
@@ -60,4 +59,3 @@ export const VideoCardList = styled.ul`
   flex-direction: row;
   */
 `;
-
