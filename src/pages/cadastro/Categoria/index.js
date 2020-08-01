@@ -5,6 +5,7 @@ import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks/useFrom';
+import categoriasRepository from '../../../repositores/categorias';
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -45,6 +46,14 @@ function CadastroCategoria() {
           values,
         ]);
         clearForm();
+
+        categoriasRepository.create({
+          titulo: values.nome,
+          cor: values.cor,
+        })
+          .then(() => {
+            console.log('Cadastrado com sucesso!');
+          });
       }}
       >
 
@@ -71,7 +80,7 @@ function CadastroCategoria() {
           onChange={handleChange}
         />
 
-        <Button>
+        <Button type="submit">
           Cadastrar
         </Button>
       </form>
