@@ -41,6 +41,36 @@
       "url": "https://www.youtube.com/watch?v=5MzOCxSWrrc",
       "categoriaId": 3,
       "id": 4
+    },
+    {
+      "titulo": "Como centralizar no CSS? 3 formas, Vertical/Horizontal + Bônus #DicasDeCSS",
+      "url": "https://www.youtube.com/watch?v=Cu-HP-gvggg",
+      "categoriaId": 4,
+      "id": 5
+    },
+    {
+      "titulo": "Pare de chutar e aprenda a display: inline #01",
+      "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE&list=PLirko8T4cEmx5eBb1-9j6T6Gl4aBtZ_5x",
+      "categoriaId": 4,
+      "id": 6
+    },
+    {
+      "titulo": "Como criar app android e ios com JavaScript: Spotcast com React Native #01",
+      "url": "https://www.youtube.com/watch?v=k1vdmXDgMJI&list=PLTcmLKdIkOWkkBSilAr6iqdnSDXdiiyIq",
+      "categoriaId": 3,
+      "id": 7
+    },
+    {
+      "titulo": "Flappy bird",
+      "url": "https://www.youtube.com/watch?v=jOAU81jdi-c&list=PLTcmLKdIkOWmeNferJ292VYKBXydGeDej",
+      "categoriaId": 1,
+      "id": 8
+    },
+    {
+      "titulo": "Como fazer validações de formulário com React? #FailFastValidations | Formik Engenharia Reversa #02",
+      "url": "https://www.youtube.com/watch?v=-nYNd6EuZHU&feature=youtu.be",
+      "categoriaId": 3,
+      "id": 9
     }
   ]
 }
