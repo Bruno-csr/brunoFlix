@@ -2,8 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
-import useForm from '../../../hooks/useFrom';
-import FormField from '../../../components/FormField';
+import useForm from '../../../hooks/useForm';
+import FormField from '../../../components/FormField/index';
+import { Span } from '../../../components/FormField/styles';
 import Button from '../../../components/Button';
 import videosRepository from '../../../repositores/videos';
 import categoriasRepository from '../../../repositores/categorias';
@@ -68,6 +69,7 @@ function CadastroVideo() {
           onChange={handleChange}
           suggestions={categoryTitles}
         />
+        <Span className="Span_Error"> Essa categoria não existe </Span>
 
         <Button type="submit">
           Cadastrar

@@ -1,7 +1,10 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormFieldWrapper, Label, Input } from './styles';
+import {
+  FormFieldWrapper, Label, Input,
+} from './styles';
+// import validate from '../../hooks/validate';
 
 function FormField({
   label, type, name, value, onChange, suggestions,
@@ -47,7 +50,6 @@ function FormField({
           )
         }
       </Label>
-      <span className="formField_error"> This field is required</span>
     </FormFieldWrapper>
   );
 }
