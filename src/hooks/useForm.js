@@ -1,8 +1,8 @@
 /* eslint-disable linebreak-style */
 import { useState } from 'react';
-import validate from './validate';
 
 function useForm(valoresIniciais) {
+  const [errors, setErrors] = useState({});
   const [values, setValues] = useState(valoresIniciais);
 
   function setValue(chave, valor) {
@@ -25,6 +25,8 @@ function useForm(valoresIniciais) {
 
   return {
     values,
+    errors,
+    setErrors,
     handleChange,
     clearForm,
   };
