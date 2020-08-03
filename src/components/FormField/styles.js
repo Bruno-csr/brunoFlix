@@ -66,7 +66,7 @@ export const Input = styled.input`
 `;
 
 export const Span = styled.span`
-  color: red;
+  color: green;
   height: 18px;
   position: relative; 
   top: 0;
