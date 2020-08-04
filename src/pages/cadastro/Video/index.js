@@ -19,6 +19,7 @@ function CadastroVideo() {
       titulo: '',
       url: '',
       categoria: '',
+      senha: '',
     },
     validate: function (values) {
       const errors = {};
@@ -63,17 +64,30 @@ function CadastroVideo() {
       <form onSubmit={(event) => {
         event.preventDefault();
 
-        // eslint-disable-next-line max-len
-        const categoriaEscolhida = categorias.find((categoria) => categoria.titulo === formik.values.categoria);
+        if (formik.values.senha === '--BrunoAdd') {
+          // eslint-disable-next-line max-len
+          const categoriaEscolhida = categorias.find((categoria) => categoria.titulo === formik.values.categoria);
 
-        videosRepository.create({
-          titulo: formik.values.titulo,
-          url: formik.values.url,
-          categoriaId: categoriaEscolhida.id,
-        })
-          .then(() => {
-            history.push('/');
-          });
+          // Tratamento de erro :(
+          if (categoriaEscolhida === undefined) {
+            alert('insira uma categoria válida');
+          } else if (formik.values.url === '') {
+            alert('insira algum URL');
+          } else if (formik.values.titulo === '') {
+            alert('insira algum Título para o vídeo');
+          } else {
+            videosRepository.create({
+              titulo: formik.values.titulo,
+              url: formik.values.url,
+              categoriaId: categoriaEscolhida.id,
+            })
+              .then(() => {
+                history.push('/');
+              });
+          }
+        } else {
+          alert('A senha está incorreta e não é possivel adicionar um vídeo');
+        }
       }}
       >
         <FormField
@@ -103,6 +117,14 @@ function CadastroVideo() {
           value={formik.values.categoria}
         />
         {formik.errors.categoria && <Span className="Span_Error">{formik.errors.categoria}</Span>}
+
+        <FormField
+          label="Senha para cadastrar um vídeo"
+          name="senha"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.senha}
+        />
 
         <Button type="submit">
           Cadastrar

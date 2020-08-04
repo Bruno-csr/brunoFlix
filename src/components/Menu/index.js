@@ -14,6 +14,10 @@ function Menu() {
         <LogoImage className="Logo" src={Logo} alt="BrunoFlix logo" />
       </Link>
 
+      {/* <Button as={Link} className="ButtonLink" to="/loguin">
+        Fazer Loguin
+      </Button> */}
+
       <Button as={Link} className="ButtonLink" to="/cadastro/video">
         Novo Vídeo
       </Button>

@@ -13,12 +13,32 @@ function CadastroCategoria() {
 
   // const { handleChange, values, clearForm } = useForm(valoresIniciais);
   const formik = useFormik({
-    valoresIniciais: {
+    initialValues: {
       nome: '',
       descricao: '',
       cor: '',
+      senha: '',
     },
-    validate: '',
+    validate: function (values) {
+      const errors = {};
+
+      // validando nome categoria
+      if (values.nome.length < 1) {
+        errors.nome = 'Digite um nome com pelo menos 1 caractere';
+      }
+
+      // validando Descrição
+      if (values.descricao === '') {
+        errors.descricao = 'Faça um resumo da categoria (Não Obrigatório)';
+      }
+
+      // validando cor
+      if (values.cor === '') {
+        errors.cor = 'Selecione uma cor';
+      }
+
+      return errors;
+    },
   });
 
   useEffect(() => {
@@ -42,21 +62,25 @@ function CadastroCategoria() {
         {formik.values.nome}
       </h1>
 
-      <form onSubmit={function handleSubmit(event) {
+      <form onSubmit={function handleChange(event) {
         event.preventDefault();
-        setCategorias([
-          ...categorias,
-          formik.values,
-        ]);
-        formik.clearForm();
+        if (formik.values.senha === '--BrunoAdd') {
+          setCategorias([
+            ...categorias,
+            formik.values,
+          ]);
+          formik.clearForm();
 
-        categoriasRepository.create({
-          titulo: formik.values.nome,
-          cor: formik.values.cor,
-        })
-          .then(() => {
-            console.log('Cadastrado com sucesso!');
-          });
+          categoriasRepository.create({
+            titulo: formik.values.nome,
+            cor: formik.values.cor,
+          })
+            .then(() => {
+              console.log('Cadastrado com sucesso!');
+            });
+        } else {
+          alert('A senha está incorreta e não é possivel adicionar uma categoria');
+        }
       }}
       >
         <FormField
@@ -84,6 +108,14 @@ function CadastroCategoria() {
           onChange={formik.handleChange}
         />
         {formik.errors.cor && <Span className="Span_Error">{formik.errors.cor}</Span>}
+
+        <FormField
+          label="Senha para cadastrar uma categoria"
+          name="senha"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.senha}
+        />
 
         <Button type="submit">
           Cadastrar

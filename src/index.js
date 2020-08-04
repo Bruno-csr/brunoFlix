@@ -10,6 +10,7 @@ import Home from './pages/Home';
 
 import CadastroVideo from './pages/cadastro/Video';
 import CadastroCategoria from './pages/cadastro/Categoria';
+// import TelaLoguin from './pages/cadastro/loguin'
 
 // const de erro - desafio de colocar um jogo na página de erro
 const paginaErro = () => <div>Página 404</div>;
@@ -23,6 +24,7 @@ ReactDOM.render(
       <Route path="/cadastro/Categoria" component={CadastroCategoria} />
       <Route path="/" component={Home} exact />
       <Route component={paginaErro} />
+      {/* <Route path="/loguin" component={TelaLoguin} /> */}
     </Switch>
   </BrowserRouter>,
   document.getElementById('root'),
