@@ -121,7 +121,7 @@ function CadastroVideo() {
         <FormField
           label="Senha para cadastrar um vídeo"
           name="senha"
-          suggestions=""
+          suggestions={['']}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.senha}

@@ -112,7 +112,7 @@ function CadastroCategoria() {
         <FormField
           label="Senha para cadastrar uma categoria"
           name="senha"
-          suggestions=""
+          suggestions={['']}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.senha}
