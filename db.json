@@ -14,6 +14,16 @@
       "titulo": "Estudando React",
       "cor": "#f5f555",
       "id": 3
+    },
+    {
+      "titulo": "Estudar CSS",
+      "cor": "#00ff00",
+      "id": 4
+    },
+    {
+      "titulo": "Jogar PS2 via pendrive",
+      "cor": "#00bfff",
+      "id": 5
     }
   ],
   "videos": [
@@ -70,6 +80,12 @@
       "url": "https://www.youtube.com/watch?v=-nYNd6EuZHU&feature=youtu.be",
       "categoriaId": 3,
       "id": 9
+    },
+    {
+      "titulo": "Método para JOGAR PS2 via PEN DRIVE",
+      "url": "https://www.youtube.com/watch?v=uPNX9Q0dEbA",
+      "categoriaId": 5,
+      "id": 10
     }
   ]
 }
